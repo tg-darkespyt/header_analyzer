@@ -3,7 +3,8 @@ import argparse
 import json
 from termcolor import colored
 from concurrent.future import ThreadPoolExecute 
-import OS
+import os
+
 REQUIRED_HEADERS = {
   "Content-Security-Policy": "Prevents XSS by restricting sources.",
     "X-Frame-Options": "Prevents clickjacking.",
