@@ -14,7 +14,9 @@ REQUIRED_HEADERS = {
     "Permissions-Policy": "Restricts use of sensors, camera, etc.",
     "Server": "Server disclosure can lead to fingerprinting."
 }
+
 results = {}
+
 def analyse_headers(url):
   try:
     response = requests.get(url, allow_redirect =True, headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
@@ -53,9 +55,8 @@ def main():
         with open(args.file, "r") as f:
           urls = [line.strip() for line in f if line.strip()]
     else:
-      print(colored(f"file not found : {"args.file}", "red"))
+      print(colored(f"file not found : {args.file}", "red"))
       return
-                        
   else:
     print(colored("please provide a url or a file with the urls", "red"))
     return
@@ -64,6 +65,7 @@ def main():
     with open(args.output, "w") as out_file:
         json.dump(results, out_file, indent=4)
     print(colored(f"Scan complete. Results saved to {args.output}", "blue"))
+
 if __name__ == "__main__":
     main()
     
