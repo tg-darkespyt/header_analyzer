@@ -1,0 +1,11 @@
+{
+    "http://litztech.in/": {
+        "Content-Security-Policy": "missing",
+        "X-Frame-Options": "missing",
+        "Strict-Transport-Security": "missing",
+        "X-XSS-Protection": "missing",
+        "Referrer-Policy": "missing",
+        "Permissions-Policy": "missing",
+        "Server": "Apache"
+    }
+}
